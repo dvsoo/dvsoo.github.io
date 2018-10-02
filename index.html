@@ -1,83 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>SooLog</title>
-        <meta name="description" content="섬세한 개발을 하고 싶은 개발자 SOO의 블로그 :-)"/>
-        <meta name="keywords" content="개발자블로그, SooLog, 개발자포트폴리오, 웹포트폴리오, 기술블로그"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+---
+layout: default
+---
 
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
 
-        <!-- sns link -->
-        <meta property="og:type" content="website"/> 
-        <meta property="og:title" content="SooLog"/> 
-        <meta property="og:description" content="섬세한 개발을 하고 싶은 개발자 SOO의 블로그 :-)"/>
-        <meta property="og:site_name" content="SooLog"/>
-        <meta property="og:image" content="/images/logo.png"/>
-        <meta property="og:url" content="https://dvsoo.github.io"/>
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-        <!-- twiiter sns link-->
-        <meta property="twiiter:card" content="summary"/>
-        <meta property="twiiter:title" content="SooLog"/>
-        <meta property="twiiter:description" content="섬세한 개발을 하고 싶은 개발자 SOO의 블로그 :-)"/>
-        <meta property="twiiter:image" content="/images/logo.png"/>
-        <meta property="twiiter:site" content="https://dvsoo.github.io/"/>
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
 
-        <!-- favicon link-->
-        <link rel="icon" type="image/png" href="./images/favicon.png" />
-        <link rel="icon" type="images/x-icon" href="./images/favicon.ico"/>
-        <link rel="icon" type="apple-touch-icon-precomposed" sizes="72*72" href="./images/favicon72.png"/>
-        <link rel="icon" type="apple-touch-icon-precomposed" href="./images/favicon57.png"/>
-        <link rel="icon" type="apple-touch-icon-precomposed" sizes="114*114" href="./images/favicon114.png"/>
-
-        <!-- css link-->
-        <link rel="stylesheet" href="./css/style.css" type="text/css">
-    </head>
-    <body>
-        <div class="wrapper">
-            <section class="visual">
-                <div class="container">
-                    <h1 class="logo">
-                        <a href="#" title="SooLog 메인페이지 바로가기 링크">
-                            <img src="./images/logo.svg" alt="logo"/>
-                        </a>
-                    </h1>
-
-                    <div class="sns_box">
-                        <ul class="sns">
-                            <li class="facebook">
-                                <a href="#" title="devsoo's facebook 바로가기 링크" class="facebook_icon">facebook icon</a>
-                            </li>
-                            <li class="instagram">
-                                <a href="#" title="devsoo's instagram 바로가기 링크" class="instagram_icon">instagram icon</a>
-                            </li>
-                            <li class="github">
-                                <a href="#" title="devsoo's github 바로가기 링크" class="github_icon">github icon</a>
-                            </li>
-                            <li class="steemit">
-                                <a href="#" title="devsoo's steemit 바로가기 링크" class="steemit_icon">steemit icon</a>
-                            </li>
-                            <li class="linkedin">
-                                <a href="#" title="devsoo's linkedin 바로가기 링크" class="linkedin_icon">linkedin icon</a>
-                            </li>
-                        </ul> <!-- END snsn-->
-                    </div> <!-- END sns_Box-->
-
-                    <nav class="gnb_box">
-                        <ul class="gnb">
-                            <li>
-                                <a href="./about.html" title="about page 바로가기 링크">About</a>
-                            </li>
-                            <li>
-                                <a href="./devlog.html" title="devlog page 바로가기 링크">Devlog</a>
-                            </li>
-                            <li>
-                                <a href="./portfolio.html" title="portfolio page 바로가기 링크">Portfolio</a>
-                            </li>
-                        </ul> <!-- END gnb-->
-                    </nav> <!-- END gnb_Box-->
-                </div> <!-- END container-->
-            </section> <!--visual-->
-        </div> <!-- END wrapper-->
-    </body>
-</html>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="button button-primary">Read More</a>
+    </article>
+  {% endfor %}
+</div>

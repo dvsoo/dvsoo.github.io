@@ -1,2 +1,4 @@
-/node_modules
-/.vscode
+_site
+.sass-cache
+.jekyll-metadata
+.idea
